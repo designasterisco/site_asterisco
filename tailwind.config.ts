@@ -16,50 +16,85 @@ module.exports = {
   darkMode: ["class", "class"],
   theme: {
   	extend: {
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '1rem',
+  		container: {
+  			center: true,
+  			padding: {
+  				DEFAULT: '1rem'
+  			},
+  			screens: {
+  				DEFAULT: '1280px'
+  			}
+  		},
+  		keyframes: {
+				slideLeft: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
         },
-				screens: {
-					DEFAULT: '1280px',
-				},
-      },
-			keyframes: {
-				moveLeft: {
-          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
-          '100%': { transform: 'translate(-150%, -50%) rotate(-360deg)' },
-        },
-        moveMiddle: {
-          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
-          '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
-        },
-        moveRight: {
-          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
-          '100%': { transform: 'translate(50%, -50%) rotate(360deg)' },
-        },
-			},
-			animation: {
-        moveLeft: 'moveLeft 1s ease forwards',
-        moveMiddle: 'moveMiddle 1s ease forwards',
-        moveRight: 'moveRight 1s ease forwards',
-      },
-			fontFamily: {
-				primary: 'var(--font-sora)',
-				secondary: 'var(--font-schoolbell)',
-			},
+  			moveLeft: {
+  				'0%': {
+  					transform: 'translate(-50%, -50%) rotate(0deg)'
+  				},
+  				'100%': {
+  					transform: 'translate(-150%, -50%) rotate(-360deg)'
+  				}
+  			},
+  			moveMiddle: {
+  				'0%': {
+  					transform: 'translate(-50%, -50%) rotate(0deg)'
+  				},
+  				'100%': {
+  					transform: 'translate(-50%, -50%) rotate(360deg)'
+  				}
+  			},
+  			moveRight: {
+  				'0%': {
+  					transform: 'translate(-50%, -50%) rotate(0deg)'
+  				},
+  				'100%': {
+  					transform: 'translate(50%, -50%) rotate(360deg)'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			moveLeft: 'moveLeft 1s ease forwards',
+  			moveMiddle: 'moveMiddle 1s ease forwards',
+  			moveRight: 'moveRight 1s ease forwards',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+				'slide-left': 'slideLeft 12s linear infinite',
+  		},
+  		fontFamily: {
+  			primary: 'var(--font-sora)',
+  			secondary: 'var(--font-schoolbell)'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-				brand: {
-					green: '#336145',
-					'light-yellow': '#E6E2C3',
-					'light': '#F3F2DE',
-					'dark': '#121212',
-				},
+  			brand: {
+  				green: '#336145',
+  				'light-yellow': '#E6E2C3',
+  				light: '#F3F2DE',
+  				dark: '#121212'
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
