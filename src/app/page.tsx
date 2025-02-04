@@ -116,7 +116,7 @@ export default function Home() {
             <h2 className="text-center text-5xl font-bold font-primary text-white">Nossos Cases de <span className="text-brand-green">Sucesso</span></h2>
           </div>
         </div>
-        <div className="relative h-auto">
+        <div className="relative md:h-[105rem] [perspective:1000px] b flex flex-col mx-auto w-full  items-start justify-start my-40">
           <Tabs
             contentClassName="mb-20"
             containerClassName="justify-center"
