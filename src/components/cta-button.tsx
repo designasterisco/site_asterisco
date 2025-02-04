@@ -3,11 +3,13 @@ import React, { type AnchorHTMLAttributes } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-type CtaButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> 
+type CtaButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  title: string;
+}
 
-export const CtaButton = ({...rest}: CtaButtonProps) => {
+export const CtaButton = ({title, ...rest}: CtaButtonProps) => {
   return (
-    <Link 
+    <Link
       href=""
       {...rest}
       className={cn(
@@ -16,7 +18,7 @@ export const CtaButton = ({...rest}: CtaButtonProps) => {
       )}
     >
       <ArrowUpRight className="size-5 group-hover:rotate-45 duration-300" />
-      Agendar reunião
+      {title}
     </Link>
   )
 }

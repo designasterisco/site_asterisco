@@ -77,11 +77,12 @@ module.exports = {
   			moveRight: 'moveRight 1s ease forwards',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-				'slide-left': 'slideLeft 12s linear infinite',
+				'slide-left': 'slideLeft 40s linear infinite',
   		},
   		fontFamily: {
   			primary: 'var(--font-sora)',
-  			secondary: 'var(--font-schoolbell)'
+  			secondary: 'var(--font-schoolbell)',
+				baloo_2: 'var(--font-baloo-2)',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

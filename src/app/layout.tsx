@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Sora, Schoolbell } from "next/font/google";
+import { Sora, Schoolbell, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 
 const sora = Sora({
   variable: "--font-sora",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+const baloo_2 = Baloo_2({
+  variable: "--font-baloo-2",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${sora.variable} ${schoolbell.variable} antialiased bg-brand-dark`}
+        className={`${sora.variable} ${schoolbell.variable} ${baloo_2.variable} antialiased bg-brand-dark`}
       >
         <Header/>
         {children}

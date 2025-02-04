@@ -11,7 +11,7 @@ export const Header = () => {
         <Logo />
         <WebMenu />
         <div className="flex items-center gap-5">
-          <CtaButton className="hidden md:flex" />
+          <CtaButton href="/" title="Agendar Reunião" className="hidden md:flex" />
           <MobileMenu />
         </div>
       </div>
