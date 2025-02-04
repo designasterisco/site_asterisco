@@ -46,7 +46,7 @@ export const MobileMenu = () => {
               ))
             }
           </nav>
-          <CtaButton className="sm:hidden" />
+          <CtaButton title="Agendar reunião" className="sm:hidden" />
         </SheetContent>
       </Sheet>
     </div>
