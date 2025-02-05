@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${sora.variable} ${schoolbell.variable} ${baloo_2.variable} antialiased bg-black`}
+        className={`${sora.variable} ${schoolbell.variable} ${baloo_2.variable} antialiased bg-[#0c0d0c]`}
       >
         <Header/>
         {children}
