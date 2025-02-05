@@ -128,7 +128,7 @@ export const FadeInDiv = ({
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
           {/* {tab.content} */}
-          <div className="container w-full bg-brand-dark flex flex-col gap-6">
+          <div className="container w-full bg-black flex flex-col gap-6">
             {
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               tab.content.map((project: any) => (

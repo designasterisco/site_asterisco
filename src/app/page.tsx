@@ -10,8 +10,11 @@ import { ArrowUpRight } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <section className="pt-40 pb-10 sm:pb-16">
-        <div className="container flex flex-col justify-center items-center ">
+      <section className="pt-40 pb-10 sm:pb-16 relative">
+          <video autoPlay loop muted playsInline  className="absolute top-0 left-0 h-full w-full z-0 object-cover">
+            <source src="/assets/videos/video_hero.mp4" />
+          </video>
+        <div className="container relative flex flex-col justify-center items-center z-[90]">
           <SectionBadge title="Vamos colocar um Asterisco no seu negócio?" />
           <h1 className="mt-5 max-w-[900px] font-primary text-[32px] sm:text-[40px] md:text-[48px]  lg:text-[72px] font-bold text-white/15 text-center leading-tight">
             O destaque que você merece está bem 
@@ -144,7 +147,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-20 bg-[url(/assets/images/contact_us_bg.webp)] bg-cover bg-center bg-no-repeat">
+      <section className="py-20 bg-[url(/assets/images/contact_us_bg.svg)] bg-cover bg-center bg-no-repeat">
         <div className="container px-4 flex items-center justify-center">
           <div className="w-full max-w-[630px] flex flex-col justify-center items-center">
             <h2 className="text-3xl font-bold font-primary text-white text-center mb-4">Se você realmente quer transformar a sua marca em algo único</h2>

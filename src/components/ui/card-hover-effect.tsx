@@ -70,7 +70,7 @@ export const CardHoverEffect = ({
             <CardDescription className="text-white/70 font-primary font-thin">{item.description}</CardDescription>
             <div className="group-hover:h-10 group-hover:opacity-100 duration-500">
             <div
-              className={"mt-10 py-2 px-5 lg:px-4 w-fit rounded-full flex items-center gap-2 group group-hover:bg-brand-green group-hover:text-brand-light-yellow duration-300 bg-brand-light-yellow text-brand-green text-md font-primary"}
+              className={"mt-10 py-2 px-5 lg:px-4 w-fit rounded-full flex items-center gap-2 group group-hover:bg-brand-green group-hover:text-brand-light-yellow duration-300 bg-white text-brand-green text-md font-primary"}
             >
               <ArrowUpRight className="size-5 group-hover:rotate-45 duration-300" />
               Quero essa solução
