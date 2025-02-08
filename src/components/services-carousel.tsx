@@ -43,8 +43,7 @@ export const ServicesCarousel = ({ services }: ServicesCarouselProps) => {
         {
           services.map((service, idx) => (
           <CarouselItem key={service.title}>
-            <Link
-              href={service.link}
+            <div
               key={service.title}
               className="relative group  block p-2 h-full w-full"
               onMouseEnter={() => setHoveredIndex(idx)}
@@ -79,15 +78,16 @@ export const ServicesCarousel = ({ services }: ServicesCarouselProps) => {
                 <CardTitle className="text-xl font-primary">{service.title}</CardTitle>
                 <CardDescription className="text-white/70 font-primary font-thin">{service.description}</CardDescription>
                 <div className="group-hover:h-10 group-hover:opacity-100 duration-500">
-                <div
+                <Link
+                  href={service.link}
                   className={"mt-10 py-2 px-5 lg:px-4 w-fit rounded-full flex items-center gap-2 group group-hover:bg-brand-green group-hover:text-white duration-300 bg-white text-brand-green text-md font-primary"}
                 >
                   <ArrowUpRight className="size-5 group-hover:rotate-45 duration-300" />
                   Quero essa solução
-                </div>
+                </Link>
                 </div>
               </Card>
-            </Link>
+            </div>
           </CarouselItem>
           ))
         }
