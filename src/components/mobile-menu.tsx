@@ -27,7 +27,7 @@ export const MobileMenu = () => {
         <SheetTrigger>
           <AlignRight className="size-8 text-brand-green" />
         </SheetTrigger>
-        <SheetContent className="bg-brand-light-yellow flex flex-col items-center gap-8">
+        <SheetContent className="z-[9999] bg-brand-light-yellow flex flex-col items-center gap-8">
           <VisuallyHidden>
             <SheetTitle>
               Menu
