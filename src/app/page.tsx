@@ -72,7 +72,7 @@ export default function Home() {
                   <br/>
                   <span className="text-brand-green">somos a Asterisco!*</span>
                 </h2>
-                <span className="absolute -top-2 sm:top-0 right-5 md:right-10 w-fit text-sm text-white/40 text-md font-secondary">
+                <span className="absolute -top-2 sm:top-0 right-2 md:right-10 w-fit text-sm text-white/40 text-md font-secondary">
                   a mais nova parceira <br/>
                   do seu negócio!
                 </span>
