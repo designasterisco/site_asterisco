@@ -11,7 +11,7 @@ interface PortfolioProjectProps {
 export const PortfolioProject = ({ content }: PortfolioProjectProps) => {
   return (
     <div className="w-full md:pr-10 min-[1110px]:pr-32">
-      <div className="w-full rounded-lg border-[5px] border-brand-green/20 bg-brand-dark p-5 md:p-10 gap-10 md:gap-0 md:pr-0 flex flex-col md:flex-row group hover:border-brand-green duration-300">
+      <div className="w-full rounded-lg border-[5px] border-white/10 bg-brand-dark p-5 md:p-10 gap-10 md:gap-0 md:pr-0 flex flex-col md:flex-row group/project hover:border-zinc-700/80 duration-300">
         <div className="w-full max-w-[520px] flex flex-col justify-between gap-10">
           <div>
             <div className="flex gap-2 items-center">
@@ -53,14 +53,14 @@ export const PortfolioProject = ({ content }: PortfolioProjectProps) => {
             </div>
           </div>
         </div>
-        <div className="relative w-full md:max-w-[603px] min-[1110px]:min-h-[450px] min-h-[380px] text-center">
-          <div className="hidden md:block md:absolute top-0 max-[767px]:left-0 min-[1110px]:left-20 left-8 w-full rounded-2xl bg-white/20 min-[1110px]:min-h-[450px] min-h-[380px]"/>
+        <div className="relative w-full md:max-w-[603px] min-[1110px]:min-h-[450px] md:min-h-[380px] text-center">
+          <div className="hidden md:block md:absolute top-0 max-[767px]:left-0 min-[1110px]:left-20 left-8 w-full rounded-2xl bg-white/20 min-[1110px]:min-h-[450px] md:min-h-[380px] "/>
           <Image
             src={content.image}
             alt=""
             width={617}
             height={457}
-            className="md:absolute max-[767px]:top-0 max-[767px]:left-0  max-[767px]:group-hover:left-0 max-[767px]:group-hover:top-0 min-[1110px]:bottom-6 max-[1099px]:-top-6 min-[1110px]:left-[104px] left-12 duration-300 w-full min-[1110px]:h-full h-[380px] min-[1110px]:group-hover:bottom-0  max-[1099px]:group-hover:top-0 min-[1110px]:group-hover:left-20 group-hover:left-8"
+            className=" md:absolute max-[767px]:top-0 max-[767px]:left-0  max-[767px]:group-hover/project:left-0 max-[767px]:group-hover/project:top-0 min-[1110px]:bottom-6 max-[1099px]:-top-6 min-[1110px]:left-[104px] left-12 duration-300 w-full min-[1110px]:h-full h-[300px] md:h-[380px] min-[1110px]:group-hover/project:bottom-0  max-[1099px]:group-hover/project:top-0 min-[1110px]:group-hover/project:left-20 group-hover:left-8"
           />
         </div>
       </div>

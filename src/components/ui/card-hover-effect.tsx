@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 export const CardHoverEffect = ({
@@ -13,7 +13,7 @@ export const CardHoverEffect = ({
   items: {
     title: string;
     description: string;
-    icon: string;
+    icon: ReactElement<SVGAElement>;
     link: string;
   }[];
   className?: string;
@@ -27,10 +27,10 @@ export const CardHoverEffect = ({
         className
       )}
     >
-      {items.map((item, idx) => (
+      {items.map(({ title, description, link, icon }, idx) => (
         <Link
-          href={item?.link}
-          key={item?.title}
+          href={link}
+          key={title}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -38,7 +38,7 @@ export const CardHoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-brand-light-yellow dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-white dark:bg-slate-800/[0.8] block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -54,23 +54,18 @@ export const CardHoverEffect = ({
           </AnimatePresence>
           <Card className="overflow-hidden relative group">
             <Image 
-              src={item.icon} 
-              alt={item.title} 
+              src="/assets/images/asterisco_logo_p1.svg" 
+              alt={title} 
               width={180}
               height={180}
               className="absolute -top-20 -right-20 opacity-30 group-hover:opacity-100 duration-200 delay-[0.2ms]"
             />
-            <Image 
-              src={item.icon} 
-              alt={item.title} 
-              width={60}
-              height={60}
-            />
-            <CardTitle className="text-xl font-primary">{item.title}</CardTitle>
-            <CardDescription className="text-white/70 font-primary font-thin">{item.description}</CardDescription>
+            {icon}
+            <CardTitle className="text-xl font-primary">{title}</CardTitle>
+            <CardDescription className="text-white/70 font-primary font-thin">{description}</CardDescription>
             <div className="group-hover:h-10 group-hover:opacity-100 duration-500">
             <div
-              className={"mt-10 py-2 px-5 lg:px-4 w-fit rounded-full flex items-center gap-2 group group-hover:bg-brand-green group-hover:text-brand-light-yellow duration-300 bg-white text-brand-green text-md font-primary"}
+              className={"mt-10 py-2 px-5 lg:px-4 w-fit rounded-full flex items-center gap-2 group group-hover:bg-brand-green group-hover:text-white duration-300 bg-white text-brand-green text-md font-primary"}
             >
               <ArrowUpRight className="size-5 group-hover:rotate-45 duration-300" />
               Quero essa solução

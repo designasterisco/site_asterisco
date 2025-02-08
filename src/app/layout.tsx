@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Schoolbell, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <Footer />
       </body>
     </html>
   );

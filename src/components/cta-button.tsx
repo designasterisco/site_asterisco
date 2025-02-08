@@ -13,7 +13,7 @@ export const CtaButton = ({title, ...rest}: CtaButtonProps) => {
       href=""
       {...rest}
       className={cn(
-        "py-3 px-5 lg:px-8 w-fit rounded-full flex items-center gap-2 group hover:text-brand-light-yellow duration-300 bg-brand-green text-white text-md font-primary",      
+        "py-3 px-5 lg:px-8 w-fit rounded-full flex items-center gap-2 group hover:text-white duration-300 bg-brand-green text-white text-md font-primary",      
         rest.className,
       )}
     >

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { PortfolioProject } from "../portfolio-project";
+import { CarouselProjects } from "../carousel";
 
 type Tab = {
   title: string;
@@ -58,7 +58,7 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
+            className={cn("relative px-4 py-2 rounded-full w-full", tabClassName)}
             style={{
               transformStyle: "preserve-3d",
             }}
@@ -77,7 +77,6 @@ export const Tabs = ({
             <span className={cn(
               "relative block text-black dark:text-white",
               active.value === tab.value ? titleActiveTabClassName : titleTabClassName,
-              
               )}
             >
               {tab.title}
@@ -128,13 +127,14 @@ export const FadeInDiv = ({
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
           {/* {tab.content} */}
-          <div className="container w-full bg-black flex flex-col gap-6">
-            {
+          <div className="container w-full bg-[#0c0d0c] flex flex-col gap-6">
+            <CarouselProjects projects={tab.content} />
+            {/* {
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               tab.content.map((project: any) => (
                 <PortfolioProject key={project.title} content={project} />
               ))
-            }
+            } */}
           </div>
         </motion.div>
       ))}

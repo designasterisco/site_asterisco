@@ -7,6 +7,8 @@ import Image from "next/image";
 import { criacaoDeSiteProjects, edicaoDeVideosProjects, identidadeVisualProjects } from '@/lib/projects'
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { ServicesCarousel } from "@/components/services-carousel";
+import { services } from "@/lib/services";
 export default function Home() {
   return (
     <>
@@ -54,7 +56,7 @@ export default function Home() {
       <section className="py-20">
         <div className="container">
           <div className="flex items-center flex-col md:flex-row gap-16 mb-10">
-            <div className="w-1/2">
+            <div className="hidden sm:block w-1/2">
               <Image 
                 src={'/assets/images/img-asterisco_sobre.webp'}
                 alt=""
@@ -62,15 +64,15 @@ export default function Home() {
                 height={530}
               />
             </div>
-            <div className="w-1/2">
+            <div className="sm:w-1/2">
               <SectionBadge title="Sobre nós" />
-              <div className="mt-4 mb-8 relative w-full max-w-[470px]">
-                <h2 className="text-[44px] leading-none font-primary text-white font-bold">
+              <div className="mt-4 mb-8 relative w-full sm:max-w-[470px]">
+                <h2 className="text-[32px] sm:text-4xl md:text-[44px] leading-none font-primary text-white font-bold">
                   Muito prazer,
                   <br/>
                   <span className="text-brand-green">somos a Asterisco!*</span>
                 </h2>
-                <span className="absolute top-0 right-10 w-fit text-sm text-white/40 text-md font-secondary">
+                <span className="absolute -top-2 sm:top-0 right-5 md:right-10 w-fit text-sm text-white/40 text-md font-secondary">
                   a mais nova parceira <br/>
                   do seu negócio!
                 </span>
@@ -88,42 +90,28 @@ export default function Home() {
 
             </div>
           </div>
-          <CardHoverEffect
-            items={[
-              {
-              icon: '/assets/images/asterisco_logo_p1.svg',
-              title: "Identidade Visual",
-              description: "Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. Neque tempor neque platea pharetra elit tempor. Morbi magna nisi nullam consequat adipiscing",
-              link: "#"
-              },
-              {
-                icon: '/assets/images/asterisco_logo_p1.svg',
-                title: "Criação de Sites",
-                description: "Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. Neque tempor neque platea pharetra elit tempor. Morbi magna nisi nullam consequat adipiscing",
-                link: "#"
-              },
-              {
-                icon: '/assets/images/asterisco_logo_p1.svg',
-                title: "Edição de Videos",
-                description: "Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. Neque tempor neque platea pharetra elit tempor. Morbi magna nisi nullam consequat adipiscing",
-                link: "#"
-              },  
-            ]}
-          />
-        </div>
-      </section>
-      <section className="py-20">
-        <div className="container">
-          <div className="flex flex-col gap-7 items-center justify-center mb-12">
-            <SectionBadge title="Portfolio" />
-            <h2 className="text-center text-5xl font-bold font-primary text-white">Nossos Cases de <span className="text-brand-green">Sucesso</span></h2>
+          <div className="sm:block hidden">
+            <CardHoverEffect
+              items={services}
+            />
+          </div>
+          <div className="sm:hidden block">
+            <ServicesCarousel services={services} />
           </div>
         </div>
-        <div className="relative md:h-[105rem] [perspective:1000px] b flex flex-col mx-auto w-full  items-start justify-start my-40">
+      </section>
+      <section className="md:pt-10 pb-20">
+        <div className="container">
+          <div className="flex flex-col gap-4 sm:gap-7 items-center justify-center ">
+            <SectionBadge title="Portfolio" />
+            <h2 className="text-center text-[32px] sm:text-4xl md:text-5xl font-bold font-primary text-white">Nossos Cases de <span className="text-brand-green">Sucesso</span></h2>
+          </div>
+        </div>
+        <div className="relative h-[34rem] sm:h-[40rem] md:h-[36rem] [perspective:1000px] flex flex-col mx-auto w-full  items-start justify-start mt-20 mb-40">
           <Tabs
             contentClassName="mb-20"
             containerClassName="justify-center"
-            tabClassName="rounded-none border-b border-b-[2x] border-b-brand-light/20 px-8"
+            tabClassName="rounded-none border-b border-b-[2x] border-b-brand-light/20 md:px-8"
             titleTabClassName="text-white/20 font-primary text-lg"
             activeTabClassName="bg-transparent rounded-none border-b-brand-light border-b-[2px]"
             titleActiveTabClassName="text-white font-primary text-lg"
@@ -147,9 +135,11 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="py-20 bg-[url(/assets/images/contact_us_bg.svg)] bg-cover bg-center bg-no-repeat">
-        <div className="container px-4 flex items-center justify-center">
-          <div className="w-full max-w-[630px] flex flex-col justify-center items-center">
+      {/* bg-[url(/assets/images/contact_us_bg.svg)] */}
+      <section className="py-20 bg-[#0c0d0c] overflow-hidden group">
+        <div className="container px-4 flex items-center justify-center relative">
+          <Image src="/assets/images/asterisc_contact_detail.svg" alt="" width={647} height={435} className="absolute top-1/2 -translate-y-1/2 -left-28 object-cover opacity-15 group-hover:opacity-40 duration-300 " />
+          <div className="relative z-50 w-full max-w-[630px] flex flex-col justify-center items-center">
             <h2 className="text-3xl font-bold font-primary text-white text-center mb-4">Se você realmente quer transformar a sua marca em algo único</h2>
             <p className="text-white/70 font-primary font-light text-center px-16 mb-10">marca uma reunião com a gente que tem um atendimento feito só pra você te esperando!*</p>
             <Link
