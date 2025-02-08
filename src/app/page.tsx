@@ -16,7 +16,7 @@ export default function Home() {
           <video autoPlay loop muted playsInline  className="absolute top-0 left-0 h-full w-full z-0 object-cover">
             <source src="/assets/videos/video_hero.mp4" />
           </video>
-        <div className="container relative flex flex-col justify-center items-center z-[90]">
+        <div className="container relative flex flex-col justify-center items-center z-[50]">
           <SectionBadge title="Vamos colocar um Asterisco no seu negócio?" />
           <h1 className="mt-5 max-w-[900px] font-primary text-[32px] sm:text-[40px] md:text-[48px]  lg:text-[72px] font-bold text-white/15 text-center leading-tight">
             O destaque que você merece está bem 
