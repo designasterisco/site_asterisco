@@ -27,7 +27,7 @@ export const Header = () => {
         <Logo />
         <WebMenu />
         <div className="flex items-center gap-5">
-          <CtaButton href="/" title="Agendar Reunião" className="hidden md:flex" />
+          <CtaButton href="https://api.whatsapp.com/send?phone=5584996419255&text=Ol%C3%A1,%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas" title="Agendar Reunião" className="hidden md:flex" />
           <MobileMenu />
         </div>
       </div>

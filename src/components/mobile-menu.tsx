@@ -46,7 +46,7 @@ export const MobileMenu = () => {
               ))
             }
           </nav>
-          <CtaButton title="Agendar reunião" className="sm:hidden" />
+          <CtaButton href="https://api.whatsapp.com/send?phone=5584996419255&text=Ol%C3%A1,%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas" title="Agendar reunião" className="sm:hidden" />
         </SheetContent>
       </Sheet>
     </div>

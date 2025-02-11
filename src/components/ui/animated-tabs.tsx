@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { CarouselProjects } from "../carousel";
+import { PortfolioProject } from "../portfolio-project";
+import type { Project } from "@/lib/projects";
 
 type Tab = {
   title: string;
@@ -126,15 +127,13 @@ export const FadeInDiv = ({
           }}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          {/* {tab.content} */}
-          <div className="container w-full bg-[#0c0d0c] flex flex-col gap-6">
-            <CarouselProjects projects={tab.content} />
-            {/* {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              tab.content.map((project: any) => (
-                <PortfolioProject key={project.title} content={project} />
+          <div className="container w-full bg-[#0c0d0c] grid grid-cols-2 gap-16">
+            {
+              tab.content.map((project: Project, index: number) => (
+                <PortfolioProject key={index} project={project} />
               ))
-            } */}
+            }
+            {/* <CarouselProjects projects={tab.content} /> */}
           </div>
         </motion.div>
       ))}
