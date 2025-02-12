@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { Badge } from './ui/badge'
 import { CtaButton } from './cta-button'
 
 interface PortfolioProjectProps {
