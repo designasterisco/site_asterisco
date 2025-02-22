@@ -28,6 +28,7 @@ export const WebMenu = () => {
           <Link 
             key={link.label} 
             href={link.href}
+            scroll
             className="font-primary text-white text-md font-normal hover:text-brand-light-yellow duration-200"
           >
             {link.label}
