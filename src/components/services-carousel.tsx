@@ -72,7 +72,7 @@ export const ServicesCarousel = ({ services }: ServicesCarouselProps) => {
                   alt={service.title} 
                   width={180}
                   height={180}
-                  className="absolute -top-20 -right-20 duration-200 delay-[0.2ms]"
+                  className="absolute -top-20 -right-20 duration-200 delay-200"
                 />
                 {service.icon}
                 <CardTitle className="text-xl font-primary">{service.title}</CardTitle>

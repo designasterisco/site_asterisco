@@ -58,7 +58,7 @@ export const CardHoverEffect = ({
               alt={title} 
               width={180}
               height={180}
-              className="absolute -top-20 -right-20 opacity-30 group-hover:opacity-100 duration-200 delay-[0.2ms]"
+              className="absolute -top-20 -right-20 opacity-30 group-hover:opacity-100 duration-200 delay-200"
             />
             {icon}
             <CardTitle className="text-xl font-primary">{title}</CardTitle>

@@ -12,6 +12,7 @@ import { ProjectsTabs } from "@/components/projects-tabs";
 export default function Home() {
   return (
     <>
+      {/* HERO SECTION */}
       <section className="pt-40 pb-10 sm:pb-16 relative">
           <video autoPlay loop muted playsInline  className="absolute top-0 left-0 h-full w-full z-0 object-cover">
             <source src="/assets/videos/video_hero.mp4" />
@@ -33,6 +34,7 @@ export default function Home() {
           </Fade>
         </div>
       </section>
+      {/* LOGOS SECTION */}
       <section className="py-10">
         <div className="container text-center gap-10">
           <Fade cascade  duration={700} triggerOnce>
@@ -57,7 +59,8 @@ export default function Home() {
           </Fade>
         </div>
       </section>
-      <section className="py-20">
+      {/* ABOUT SECTION */}
+      <section id="sobre-nos" className="py-20">
         <div className="container">
           <div className="flex items-center flex-col md:flex-row gap-16 mb-10">
             <div className="hidden sm:block w-1/2">
@@ -98,17 +101,20 @@ export default function Home() {
               </Fade>
             </div>
           </div>
-          <div className="sm:block hidden">
-            <CardHoverEffect
-              items={services}
-            />
-          </div>
-          <div className="sm:hidden block">
-            <ServicesCarousel services={services} />
+          <div id="servicos">
+            <div className="sm:block hidden">
+              <CardHoverEffect
+                items={services}
+              />
+            </div>
+            <div className="sm:hidden block">
+              <ServicesCarousel services={services} />
+            </div>
           </div>
         </div>
       </section>
-      <section className="md:pt-10 pb-20">
+      {/* PORTFOLIO SECTION */}
+      <section id="portfolio" className="md:pt-10 pb-20">
         <div className="container">
           <div className="flex flex-col gap-4 sm:gap-7 items-center justify-center ">
             <SectionBadge title="Portfolio" />
@@ -119,6 +125,7 @@ export default function Home() {
           <ProjectsTabs />
         </div>
       </section>
+      {/* CONTACT SECTION */}
       <section className="py-20 bg-[#0c0d0c] overflow-hidden group/asterisk-detail">
         <div className="container px-4 flex items-center justify-center relative">
           <Image src="/assets/images/asterisc_contact_detail.svg" alt="" width={647} height={435} className="absolute top-1/2 -translate-y-1/2 -left-28 object-cover opacity-15 group-hover/asterisk-detail:opacity-40 duration-300 " />

@@ -1,9 +1,11 @@
 'use client'
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { criacaoDeSiteProjects, edicaoDeVideosProjects, identidadeVisualProjects, type Project } from '@/lib/projects'
 import { PortfolioProject } from './portfolio-project'
-import { Fade } from 'react-awesome-reveal'
+
 export const ProjectsTabs = () => {
   return (
     <Tabs defaultValue="identidade-visual" className="container w-full">
