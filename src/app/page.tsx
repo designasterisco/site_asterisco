@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
       {/* LOGOS SECTION */}
-      <section className="py-10">
+      {/* <section className="py-10">
         <div className="container text-center gap-10">
           <Fade cascade  duration={700} triggerOnce>
             <h2 className="text-[28px] sm:text-[32px] font-primary font-semibold text-white leading-tight">Marcas que <strong className="text-brand-green">confiam</strong> no<br/> nosso trabalho</h2>
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
           </Fade>
         </div>
-      </section>
+      </section> */}
       {/* ABOUT SECTION */}
       <section id="sobre-nos" className="py-20">
         <div className="container">

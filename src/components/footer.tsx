@@ -16,7 +16,7 @@ export const Footer = () => {
       </footer>
       <Link 
         href="https://api.whatsapp.com/send?phone=5584996419255&text=Ol%C3%A1,%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas"
-        className="fixed bottom-8 right-8 flex items-center justify-center w-[70px] h-[70px] rounded-full bg-[#25d366] "  
+        className="z-[99] fixed bottom-8 right-8 flex items-center justify-center w-[70px] h-[70px] rounded-full bg-[#25d366] "  
         target="_blank"
         title="Botão de contato Whatsapp"
       >
