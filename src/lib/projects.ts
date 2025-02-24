@@ -8,7 +8,7 @@ export interface Project {
 
 const identidadeVisualProjects: Project[] = [
   {
-    title: 'Campestre.',
+    title: 'Campestre',
     tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias', 'Paleta de Cores'],
     link: 'https://www.behance.net/gallery/218858619/Campestre-Identidade-Visual',
     image: '/assets/images/idv_1.webp',
