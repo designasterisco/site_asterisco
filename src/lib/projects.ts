@@ -2,44 +2,37 @@ export interface Project {
   title: string;
   tags: string[];
   link: string;
+  type?: 'video' | 'site' | 'idv';
   image: string;
 }
 
 const identidadeVisualProjects: Project[] = [
   {
-    title: 'Lorem ipsum dolor sit.',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
+    title: 'Campestre.',
+    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias', 'Paleta de Cores'],
+    link: 'https://www.behance.net/gallery/218858619/Campestre-Identidade-Visual',
+    image: '/assets/images/idv_1.webp',
    
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. 2',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
+    title: 'Seven Street',
+    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Paleta de Cores'],
+    link: 'https://www.behance.net/gallery/203584375/Seven-Street-Identidade-VIsual',
+    image: '/assets/images/idv_2.webp',
+    
+  },
+  {
+    title: 'Oceano Azul',
+    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Papelaria', 'Paleta de Cores'],
+    link: 'https://www.behance.net/gallery/218862029/Oceano-Azul-Redesign',
+    image: '/assets/images/idv_3.webp',
    
   },
   {
-    title: 'Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. 2',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
-   
-  },
-  {
-    title: 'Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. 2',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
-   
-  },
-  {
-    title: 'Lorem ipsum dolor sit amet consectetur. Integer in curabitur pretium egestas. 2',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
-   
+    title: 'Wendell Souza - Arquitetura e Interiores',
+    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Papelaria', 'Paleta de Cores'],
+    link: 'https://www.behance.net/gallery/193071619/Wendell-Souza-Identidade-Visual',
+    image: '/assets/images/idv_4.webp',
   },
 ]
 
@@ -78,11 +71,18 @@ const criacaoDeSiteProjects: Project[] = [
 
 const edicaoDeVideosProjects: Project[] = [
   {
-    title: 'Lorem ipsum dolor sit.',
-    tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Tipografias'],
-    link: '#',
-    image: '/assets/images/placeholder/project.webp',
-   
+    title: 'O Ponto dos Salgados - Deus é Conosco',
+    tags: ['Video', 'Edição de Video'],
+    link: 'https://www.youtube.com/embed/AsdITNWmNR0?si=mWaPfAY6vYnjPa3w',
+    type: 'video',
+    image: '',
+  },
+  {
+    title: 'Short - Asterisco',
+    tags: ['Video', 'Short', 'Edição de Video'],
+    link: 'https://www.youtube.com/embed/2HOX_1qZzdE?si=2tlY_da2UiSQf5fE',
+    type: 'video',
+    image: '',
   },
 ]
 
