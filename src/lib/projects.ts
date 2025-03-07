@@ -15,10 +15,16 @@ const identidadeVisualProjects: Project[] = [
    
   },
   {
+    title: 'O Ponto dos Salgados',
+    tags: ['ID Visual', 'Íconografia', 'Mockup’s', 'Patterns', 'Paleta de Cores'],
+    link: 'https://www.behance.net/gallery/220918315/O-Ponto-dos-Salgados-Identidade-Visual',
+    image: '/assets/images/idv_2.webp',
+  },
+  {
     title: 'Seven Street',
     tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Paleta de Cores'],
     link: 'https://www.behance.net/gallery/203584375/Seven-Street-Identidade-VIsual',
-    image: '/assets/images/idv_2.webp',
+    image: '/assets/images/idv_4.webp',
     
   },
   {
@@ -32,7 +38,7 @@ const identidadeVisualProjects: Project[] = [
     title: 'Wendell Souza - Arquitetura e Interiores',
     tags: ['ID Visual', 'Mockup’s', 'Patterns', 'Papelaria', 'Paleta de Cores'],
     link: 'https://www.behance.net/gallery/193071619/Wendell-Souza-Identidade-Visual',
-    image: '/assets/images/idv_4.webp',
+    image: '/assets/images/idv_5.webp',
   },
 ]
 
